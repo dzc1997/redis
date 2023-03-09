@@ -1,0 +1,30 @@
+---string---
+set hello world
+get hello
+del hello
+get hello nil
+
+---list---
+rpush list-key item
+lrange list-key 0 -1
+lindex list-key 1
+lpop list-key
+
+---set---
+sadd set-key item
+smembers set-key
+sismemeber set-key item
+srem set-key item
+smembers set-key
+
+---zset---
+zadd zset-name 1 name
+zrange zset-name 0 -1
+zrange zset-name 0 -1 withcores
+zrem zset-name name
+
+---hash---
+hset hash-key sub-key value
+hgetall hash-key
+hder hash-key sub-key
+hget hash-key sub-key

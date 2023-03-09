@@ -1,0 +1,58 @@
+操作String类型
+Set：设置字符串的值
+SetEX：设置并指定过期时间(set expire)
+SetNX：设置并指定过期时间(if not exists) 如果key已经存在，则返回err
+Get：获取字符串的值
+GetRange：获取字符串值的子字符
+Incr：将 key 中储存的数字值增加1
+IncrBy：将 key 所储存的值加上给定的增量值
+Decr：将 key 中储存的数字值减1
+DecrBy：key 所储存的值减去给定的减量值
+
+操作List类型
+LPush：在列表的左侧加入数据
+LLen：获取链表元素个数
+LIndex：获取列表某下标对应元素
+LInsert：向某个索引位置插入一个元素
+LSet：设置列表某个索引位置的值
+Lpop：从列表左侧弹出数据
+LRange：获取某个索引范围里的元素
+LTrim：对一个列表进行修剪，只让列表保留指定区间内的元素，不在指定区间之内的元素都将被删除
+
+操作Hash类型
+HSet：给key设置field和value
+HGet：获取key某个field的value
+HMset：给key批量设置field和value
+HLen：获取键值对个数
+HGetAll：获取全部键值对元素
+HKeys：获取所有的key
+HIncrBy：增加，成功返回增加后的值
+HDel：删除键值对元素
+HExists：检查key某个field是否存在
+
+操作Set类型
+SAdd：向指定集合添加集合元素
+SSMembers：获取集合中的所有成员
+SCard：获取集合中成员的数量
+SIsMember：判断某成员是否在集合中
+SRem：删除集合里指定成员
+SPop：随机从集合中弹出一个元素
+SInter：求集合间的交集
+SDiff：求集合间的差集
+SUnion：求集合间的并集
+
+操作Zset类型
+ZAdd：向一个有序集合中添加元素
+ZCard：获取有序集合的元素个数
+ZCount：获取有序集合指定区间内元素个数
+ZScore：获取有序集合的元素的score
+ZRank：返回有序集中指定成员的排名。其中有序集成员按分数值递增(从小到大)顺序排列。
+ZRevRank:返回有序集合中指定成员的排名，有序集成员按分数值递减(从大到小)排序
+ZRange：返回有序集中，指定区间内的成员，其中成员的位置按分数值递增(从小到大)来排序。
+ZRevRange：返回有序集中，指定区间内的成员，其中成员的位置按分数值递减(从大到小)来排列。
+ZIncrBy：对有序集合中指定成员的分数加上一个增量
+ZRangeByScore：通过分数返回有序集合指定区间内的成员，分数从低到高排序
+ZRevRangeByScore：返回有序集中指定分数区间内的成员，分数从高到低排序
+ZRemRangeByRank：移除有序集合中给定的排名区间的所有成员
+ZRemRangeByScore：移除有序集合中给定的分数区间的所有成员
+ZRem：移除有序集合中的一个或多个成员
